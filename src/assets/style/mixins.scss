@@ -1,0 +1,6 @@
+@mixin listInline {
+    display: flex;
+    list-style: none;
+    gap: 1.875rem;
+    
+}
