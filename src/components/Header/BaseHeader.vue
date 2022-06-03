@@ -40,7 +40,7 @@ export default {
     }
 
     &__logo_img{
-        width: 60px;
+        width: 80px;
     }
 
     
@@ -54,9 +54,9 @@ export default {
         text-decoration: none;
         color: black;
         text-transform: uppercase;
-        font-size: .625rem;
+        font-size: .75rem;
         font-weight: bolder;
-        padding: 35px 0px;
+        padding: 45px 0px;
         }
 
         .active { // header__nav ul .active a
