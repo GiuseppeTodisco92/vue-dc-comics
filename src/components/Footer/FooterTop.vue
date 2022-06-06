@@ -29,6 +29,7 @@ export default {
   &__nav{
     @include listInline;
     display: flex;
+    flex-wrap: wrap;
     gap: 3.75rem;
 
     a{

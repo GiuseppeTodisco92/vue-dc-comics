@@ -6,16 +6,8 @@
       </div>
      
      <ul class="header__nav">
-         <li><a href="">characters</a></li>
-         <li><a class="active" href="">comics</a></li>
-         <li><a href="">movies</a></li>
-         <li><a href="">tv</a></li>
-         <li><a href="">games</a></li>
-         <li><a href="">collectibles</a></li>
-         <li><a href="">videos</a></li>
-         <li><a href="">fans</a></li>
-         <li><a href="">news</a></li>
-         <li><a href="">shop</a></li>
+         <li v-for="(link,index) in links" :key="index" :class="{active : link.current}" ><a href="link.url">{{link.text}}</a></li>
+         
      </ul>
   </header>
 </template>
@@ -24,6 +16,66 @@
  
 export default {
     name: 'BaseHeader',
+    // inserire i data dei link
+    data(){
+        return {
+            links: [
+                {
+                    text:"characters",
+                    ulr:"#",
+                    current: false,
+                },
+                {
+                    text:"comics",
+                    ulr:"#",
+                    current: true,
+                },
+                {
+                    text:"movies",
+                    ulr:"#",
+                    current: false,
+                },
+                {
+                    text:"tv",
+                    ulr:"#",
+                    current: false,
+                },
+                {
+                    text:"games",
+                    ulr:"#",
+                    current: false,
+                },
+                {
+                    text:"collectibles",
+                    ulr:"#",
+                    current: false,
+                },
+                {
+                    text:"videos",
+                    ulr:"#",
+                    current: false,
+                },
+                {
+                    text:"fans",
+                    ulr:"#",
+                    current: false,
+                },
+                {
+                    text:"news",
+                    ulr:"#",
+                    current: false,
+                },
+                {
+                    text:"shop",
+                    ulr:"#",
+                    current: false,
+                },
+
+                
+
+            ],
+        }
+    } 
 }
 </script>
 
@@ -48,6 +100,7 @@ export default {
     &__nav{
         @include listInline;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
 
          a{
@@ -56,12 +109,14 @@ export default {
         text-transform: uppercase;
         font-size: .75rem;
         font-weight: bolder;
-        padding: 45px 0px;
+        
         }
 
         .active { // header__nav ul .active a
                color: var(--primary-color);
-               border-bottom: 5px solid var(--primary-color) ;
+               border-bottom: 4px solid var(--primary-color) ;
+               margin-top:5px;
+               padding: 50px 0px;
         }
 
         a:hover{
