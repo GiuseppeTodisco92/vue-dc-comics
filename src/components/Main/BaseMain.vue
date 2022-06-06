@@ -1,26 +1,26 @@
 <template>
   <main class="main ">
     <hero-section/>
+    <card-section/>
       
   </main>
 </template>
 
 <script>
-import HeroSection from '../sections/HeroSection.vue'
+import HeroSection from '../sections/HeroSection.vue';
+import CardSection from '../sections/CardSection.vue';
 
 export default {
-  components: { HeroSection },
-    name: 'BaseMain'
+  
+    name: 'BaseMain',
+    components: { 
+      HeroSection, 
+      CardSection
+       },
 }
 </script>
 
 <style lang="scss" scoped>
-  .main{
-    color: white;
-    background-color: black;
-    display: flex;
-    align-items: center;
-  }
 
 
 </style>
