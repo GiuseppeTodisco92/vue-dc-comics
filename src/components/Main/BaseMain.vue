@@ -1,21 +1,21 @@
 <template>
   <main class="main ">
-    <section class="container">
-      <h1> --> Content goes here  </h1>
-    </section>
+    <hero-section/>
       
   </main>
 </template>
 
 <script>
+import HeroSection from '../sections/HeroSection.vue'
+
 export default {
+  components: { HeroSection },
     name: 'BaseMain'
 }
 </script>
 
 <style lang="scss" scoped>
   .main{
-    height: 100px;
     color: white;
     background-color: black;
     display: flex;
